@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block title %}
+<title>Create Post</title>{% endblock title %} {% block content %}
+
+<h1 class="container">Create New Post</h1>
+<div class="container">
+    
+    <form action="{{url_for('posts.create_post')}}" method="post" class="mb-5">
+        {{form.hidden_tag()}}
+        <div class="mb-3">
+            {{form.title.label}}
+            {{form.title(class="form-control")}}
+        </div>
+        <div class="mb-3">
+            {{form.body.label}}
+            {{form.body(class="form-control")}}
+        </div>
+        <div class="mb-3">
+            {{form.submit(class="btn btn-primary")}}
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card container">
+    <div class="card-header bg-primary text-white">
+      {{post.created.date()}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.body}}</p>
+      <!---<a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+  </div>
+{% endblock content %}
